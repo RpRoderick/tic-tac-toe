@@ -1,4 +1,17 @@
 <template>
+  <div class="game_board_container">
+    <div class="game_board">
+      <div class="game_board_box" />
+      <div class="game_board_box" />
+      <div class="game_board_box" />
+      <div class="game_board_box" />
+      <div class="game_board_box" />
+      <div class="game_board_box" />
+      <div class="game_board_box" />
+      <div class="game_board_box" />
+      <div class="game_board_box" />
+    </div>
+  </div>
   <div class="reset_password_link">
     <div class="reset_password">
       <a href="url">Reset Password?</a>
