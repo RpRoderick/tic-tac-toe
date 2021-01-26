@@ -1,0 +1,7 @@
+.hello {
+  font-size: 3em;
+
+  @include breakpoint(wide) {
+    font-size: 10em;
+  }
+}
