@@ -1,15 +1,48 @@
-.ttt_img {
+.home_component_container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-.ttt_container {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
+  .game_board_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  .lets_play {
+    .game_board {
+      display: grid;
+      grid-template-rows: 25px 25px 25px;
+      grid-template-columns: 25px 25px 25px;
+      column-gap: 5px;
+      row-gap: 5px;
+
+      @include breakpoint(medium) {
+        grid-template-rows: 50px 50px 50px;
+        grid-template-columns: 50px 50px 50px;
+      }
+
+      @include breakpoint(large) {
+        grid-template-rows: 50px 50px 50px;
+        grid-template-columns: 50px 50px 50px;
+      }
+
+      @include breakpoint(wide) {
+        grid-template-rows: 50px 50px 50px;
+        grid-template-columns: 50px 50px 50px;
+      }
+
+      .game_board_box {
+        cursor: pointer;
+        border: 1px solid;
+
+        &:hover {
+          background-color: $color_green;
+        }
+      }
+    }
+  }
+
+  .header_message_container {
     display: flex;
     margin-top: 20px;
     font-size: 60px;
@@ -34,63 +67,27 @@
     }
   }
 
-  .login {
+  .pagination_box_container {
     display: flex;
-    margin-bottom: 20px;
-    color: $color_jet;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 300px;
+    max-height: 300px;
+    overflow: scroll;
+    border: 1px solid $color_green;
 
-    p {
-      text-align: left;
+    @include breakpoint(large) {
+      min-width: 500px;
+      max-width: 500px;
+      min-height: 500px;
+      max-height: 500px;
     }
 
-    ::placeholder {
-      text-indent: 1em;
-    }
-
-    input {
-      width: 200px;
-      height: 50px;
-      text-indent: 1em;
-      border: 2px solid;
-      border-color: $color_green;
-      border-radius: 5px;
-      outline: none;
-    }
-  }
-
-  .forgot_username {
-    margin-top: 20px;
-    text-align: center;
-  }
-
-  .forgot_password {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  .login_button {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-
-    button {
-      width: 125px;
-      height: 50px;
-      font-size: 18px;
-      color: $color_white;
-      cursor: pointer;
-      background-color: $color_green;
-      border-color: $color_green;
-      border-radius: 5px;
-      outline: none;
-      box-shadow: $box_shadow;
-
-      &:hover {
-        transform: scale(1.1);
-      }
+    @include breakpoint(wide) {
+      min-width: 500px;
+      max-width: 500px;
+      min-height: 500px;
+      max-height: 500px;
     }
   }
 }
