@@ -1,19 +1,19 @@
 <template>
-  <div class="game_board_container">
-    <div class="game_board">
-      <div class="game_board_box" />
-      <div class="game_board_box" />
-      <div class="game_board_box" />
-      <div class="game_board_box" />
-      <div class="game_board_box" />
-      <div class="game_board_box" />
-      <div class="game_board_box" />
-      <div class="game_board_box" />
-      <div class="game_board_box" />
+  <div :class="$style.game_board_container">
+    <div :class="$style.game_board">
+      <div :class="$style.game_board_box" />
+      <div :class="$style.game_board_box" />
+      <div :class="$style.game_board_box" />
+      <div :class="$style.game_board_box" />
+      <div :class="$style.game_board_box" />
+      <div :class="$style.game_board_box" />
+      <div :class="$style.game_board_box" />
+      <div :class="$style.game_board_box" />
+      <div :class="$style.game_board_box" />
     </div>
   </div>
-  <div class="reset_password_link">
-    <div class="reset_password">
+  <div :class="$style.reset_password_link">
+    <div :class="$style.reset_password">
       <a href="url">Reset Password?</a>
     </div>
     <label>
@@ -41,12 +41,12 @@
       >
     </label>
   </div>
-  <div class="submit_button">
+  <div :class="$style.submit_button">
     <button type="submit">
       Login
     </button>
   </div>
-  <div class="sign_out_button">
+  <div :class="$style.sign_out_button">
     <button type="submit">
       Sign Out
     </button>
@@ -59,6 +59,6 @@ export default {
 };
 </script>
 
-<style lang="scss" src="./styles.scss">
+<style lang="scss" src="./styles.scss" module>
 
 </style>

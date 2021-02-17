@@ -1,11 +1,11 @@
 <template>
-  <div class="contact_title">
+  <div :class="$style.contact_title">
     <p>
-      Contact <span class="second_word">Info</span>
+      Contact <span :class="$style.second_word">Info</span>
     </p>
     <hr>
   </div>
-  <div class="contact_body">
+  <div :class="$style.contact_body">
     <h2>Matthew Roderick</h2>
     <p>Front End Developer</p>
     <br>
@@ -33,5 +33,5 @@ export default {
 };
 </script>
 
-<style lang="scss" src="./styles.scss">
+<style lang="scss" src="./styles.scss" module>
 </style>
