@@ -1,16 +1,34 @@
 <template>
-  <div :class="$style.home_component_container">
+  <div :class="$style.home_route_component_container">
     <div :class="$style.game_board_container">
       <div :class="$style.game_board">
-        <div :class="$style.game_board_box" />
-        <div :class="$style.game_board_box" />
-        <div :class="$style.game_board_box" />
-        <div :class="$style.game_board_box" />
-        <div :class="$style.game_board_box" />
-        <div :class="$style.game_board_box" />
-        <div :class="$style.game_board_box" />
-        <div :class="$style.game_board_box" />
-        <div :class="$style.game_board_box" />
+        <div :class="$style.game_board_box">
+          T
+        </div>
+        <div :class="$style.game_board_box">
+          I
+        </div>
+        <div :class="$style.game_board_box">
+          C
+        </div>
+        <div :class="$style.game_board_box">
+          T
+        </div>
+        <div :class="$style.game_board_box">
+          A
+        </div>
+        <div :class="$style.game_board_box">
+          C
+        </div>
+        <div :class="$style.game_board_box">
+          T
+        </div>
+        <div :class="$style.game_board_box">
+          O
+        </div>
+        <div :class="$style.game_board_box">
+          E
+        </div>
       </div>
     </div>
     <div :class="$style.header_message_container">

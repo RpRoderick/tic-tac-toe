@@ -1,23 +1,27 @@
 <template>
   <div :class="$style.ui_container">
-
-
     <div :class="$style.ui_container_navigation_container">
-      <button 
+      <div   
         :class="$style.navigation_menu_item"
-        @click="signInVisible"
       >
-        Sign In
-      </button>
-      <button 
+        <button 
+          type="button"
+          @click="signInVisible"
+        >
+          Sign In
+        </button>
+      </div>
+      <div   
         :class="$style.navigation_menu_item"
-        @click="signUpVisible"  
       >
-        Sign Up
-      </button>
+        <button 
+          :class="$style.navigation_menu_item"
+          @click="signUpVisible"  
+        >
+          Sign Up
+        </button>
+      </div>
     </div>
-
-
     <div 
       v-if="signIn"
       :class="$style.ui_form"

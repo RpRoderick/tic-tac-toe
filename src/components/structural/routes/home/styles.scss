@@ -1,11 +1,14 @@
-.home_component_container {
+.home_route_component_container {
   display: flex;
+  min-height: 100vh;
+  max-height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   .game_board_container {
     display: flex;
+    margin: $margin_large 0 0;
     align-items: center;
     justify-content: center;
 
@@ -32,10 +35,14 @@
       }
 
       .game_board_box {
+        display: flex;
         cursor: pointer;
         border: 1px solid;
+        justify-content: center;
+        align-items: center;
 
         &:hover {
+          color: $color_white;
           background-color: $color_green;
         }
       }
@@ -44,8 +51,8 @@
 
   .header_message_container {
     display: flex;
-    margin-top: 20px;
-    font-size: 60px;
+    margin: $margin_medium 0;
+    font-size: 36px;
     color: $color_green;
     justify-content: center;
     align-items: center;
@@ -54,16 +61,16 @@
       margin: 0;
     }
 
+    span {
+      color: $color_jet;
+    }
+
     @include breakpoint(large) {
-      font-size: 70px;
+      font-size: 60px;
     }
 
     @include breakpoint(wide) {
-      font-size: 90px;
-    }
-
-    span {
-      color: $color_jet;
+      font-size: 60px;
     }
   }
 
@@ -73,21 +80,22 @@
     max-width: 300px;
     min-height: 300px;
     max-height: 300px;
+    margin: 0 0 $margin_large;
     overflow: scroll;
     border: 1px solid $color_green;
 
     @include breakpoint(large) {
       min-width: 500px;
       max-width: 500px;
-      min-height: 500px;
-      max-height: 500px;
+      min-height: 100%;
+      max-height: 100%;
     }
 
     @include breakpoint(wide) {
       min-width: 500px;
       max-width: 500px;
-      min-height: 500px;
-      max-height: 500px;
+      min-height: 100%;
+      max-height: 100%;
     }
   }
 }
