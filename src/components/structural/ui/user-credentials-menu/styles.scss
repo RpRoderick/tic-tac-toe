@@ -5,11 +5,18 @@
 
   .ui_container_navigation_container {
     display: flex;
+    min-height: $height_large;
+    max-height: $height_large;
     flex: 1;
     justify-content: center;
 
     .navigation_menu_item {
       flex: 1;
+
+      button {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 

@@ -1,38 +1,62 @@
-.game_board_container {
+.play_route_component_container { 
   display: flex;
-  align-items: center;
-  justify-content: center;
+  // min-height: 100vh;
+  // max-height: 100vh;
+  flex-direction: column;
 
-  .game_board {
-    display: grid;
-    grid-template-rows: 100px 100px 100px;
-    grid-template-columns: 100px 100px 100px;
-    column-gap: 5px;
-    row-gap: 5px;
+  .game_container {
+    display: flex;
 
-    @include breakpoint(medium) {
-      grid-template-rows: 150px 150px 150px;
-      grid-template-columns: 150px 150px 150px;
+    .game_information_display_container {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      margin: $margin_large;
+      align-items: center;
+      justify-content: center;
+
+      .player_container {
+        margin: $margin_large;
+      }
     }
 
-    @include breakpoint(large) {
-      grid-template-rows: 150px 150px 150px;
-      grid-template-columns: 150px 150px 150px;
-    }
+    .game_board_container {
+      display: flex;
+      flex: 1;
+      margin: $margin_large;
+      align-items: center;
 
-    @include breakpoint(wide) {
-      grid-template-rows: 150px 150px 150px;
-      grid-template-columns: 150px 150px 150px;
-    }
+      .game_board {
+        display: grid;
+        grid-template-rows: 100px 100px 100px;
+        grid-template-columns: 100px 100px 100px;
+        column-gap: 5px;
+        row-gap: 5px;
 
+        @include breakpoint(medium) {
+          grid-template-rows: 150px 150px 150px;
+          grid-template-columns: 150px 150px 150px;
+        }
 
-    .game_board_box {
-      cursor: pointer;
-      border: 1px solid;
+        @include breakpoint(large) {
+          grid-template-rows: 150px 150px 150px;
+          grid-template-columns: 150px 150px 150px;
+        }
 
-      &:hover {
-        background-color: $color_blue_primary;
+        @include breakpoint(wide) {
+          grid-template-rows: 150px 150px 150px;
+          grid-template-columns: 150px 150px 150px;
+        }
+
+        .game_board_box {
+          cursor: pointer;
+          border: 1px solid;
+
+          &:hover {
+            background-color: $color_green;
+          }
+        }
       }
     }
   }
-}
+ }
